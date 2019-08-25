@@ -1,3 +1,6 @@
+<?php
+$varsesion = null;
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -263,7 +266,7 @@ document.oncontextmenu = function(){return false;}
 							<div class="gallery-grids">
 								<div class="col-md-4 gallery-top">
 									<figure class="effect-bubba">
-										<a href="404.html">
+										<a href="404.php">
 											<img src="images/g4.jpg" alt="" class="img-responsive" />
 											<figcaption>
 												<h4>Colegio</h4>
@@ -637,7 +640,7 @@ document.oncontextmenu = function(){return false;}
 				<h3>Contacto</h3>
 				<div class="heading-underline"></div>
 
-				<form class="contact_form slideanim" action="e.php" method="post" name="contacto" id="contacto" onsubmit="return checkForm(this);">
+				<form class="contact_form slideanim" action="enviado.php" method="post" name="contacto" id="contacto" onsubmit="return checkForm(this);">
 
 					<div class="message">
 						<div class="col-md-6 col-sm-6 grid_6 c1">

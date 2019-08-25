@@ -1,3 +1,16 @@
+<?php
+	session_start();
+	error_reporting(0);
+	$varsesion = $_POST['t_nombre'];
+
+	if($varsesion == null || $varsesion = ''){
+		echo 'Usted no tiene autorizacion';
+        header("Refresh:3; url=index.php");
+		die();
+	}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +21,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Yohan Roldan Web, Desarrollo Web, PHP, Fotografía, Yohan Roldan" />
+	<META HTTP-EQUIV="REFRESH" CONTENT="3; URL=index.php">
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //For-Mobile-Apps -->
 
@@ -26,6 +40,7 @@
 			.data("origWidth", $(this).width())
 			.width(0)
 			.animate({
+
 				width: $(this).data("origWidth")
 			}, 1200);
 		});
@@ -46,85 +61,60 @@ document.oncontextmenu = function(){return false;}
 	<body ondragstart="return false" onselectstart="return false" oncontextmenu="return false">
 
 <!--<script language='JavaScript'>window.open('http://www.chenico.com', 'geoflotante', '');</script>-->    <!--abrir de una vez otra pestaña-->
-	<!-- Header -->
-	<div class="header">
-
-		<div class="container">
-
-			<!-- Navigation -->
-			<nav class="navbar navbar-inverse navbar-default">
-
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Navegación</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Logo -->
-					<div class="logo">
-						<a class="navbar-brand button" href="index.html">Yohan Roldan</a>
-					</div>
-					<!-- //Logo -->
-				</div>
-
-			</nav>
-			<!-- //Navigation -->
-
-		</div>
-		<!-- //Container -->
-
-	</div>
-	<!-- //Header -->
 
 	<!-- Content -->
 	<div class="content">
-
-		
 		<!-- Features -->
 		<div class="features" id="trabajos">
 			<div class="container">
-
-				<h1>ERROR 404</h1>
+				<h1>Mensaje Enviado</h1>
 				<div class="heading-underline"></div>
+				
+				<?php 
+					include_once('conex.php');
 
-				<h2>Página no encontrada o fuera de servicio</h2>
-				<div class="feature-grid">
-					<!--<div class="col-md-4 feature1 slideanim">
-						<div class="row features-item sans-shadow text-center">
-							<div class="features-icon">
-								<img src="images/f1.png" alt="Cubicle">
-							</div>
-							<div class="features-info">
-								<h4>Unique Design</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							</div>
-							<div class="clearfix"></div>
-						</div><!-- //Row -->
-					</div>
-					<!--
-					<div class="col-md-4 feature1 slideanim">
-						<div class="row features-item sans-shadow text-center">
-							<div class="features-icon">
-								<img src="images/f2.png" alt="Cubicle">
-							</div>
-							<div class="features-info">
-								<h4>*****</h4>
-								<p>*****<BR><!--<a href="ejercicios/guia1/ejercicio1.html"><FONT color="gris">Ver</a> <br>  AQIO VA ->- <a href="pdfs/guia1/ejercicio1HTML.pdf"><FONT color="gris">DescargarHTML </a><a href="pdfs/guia1/ejercicio1PHP.pdf"> <FONT color="gris">DescargarPHP</a></p>
-								<p>Ejercicio 2<BR><a href="ejercicios/guia1/ejercicio2.html"><FONT color="gris">Ver</a> <a href="pdfs/guia1/ejercicio2HTML.pdf"><FONT color="gris">DescargarHTML</a> <a href="pdfs/guia1/ejercicio2PHP.pdf"><FONT color="gris">DescargarPHP</a></p>
-								<p>Ejercicio 3<BR><a href="ejercicios/guia1/ejercicio3.html"><FONT color="gris">Ver</a> <a href="pdfs/guia1/ejercicio3HTML.pdf"><FONT color="gris">DescargarHTML</a> <a href="pdfs/guia1/ejercicio3PHP.pdf"><FONT color="gris">DescargarPHP</a></p>
-							</div>
-							<div class="clearfix"></div>
-						</div><!-- //Row -->
-					</div>
-					<div class="clearfix"></div>
+					$nombre = $_POST['t_nombre']; 
+					$correo_electronico= $_POST['t_correo']; 
+					$telefono = $_POST['t_telefono']; 
+					$mensaje=$_POST['t_mensaje']; 
+
+					$con=mysqli_connect($host, $user, $pw, $bd);// or die("Problemas al conectar la base de datos");
+
+					$query = "INSERT INTO  tb_solicitudes (nombre, 
+															correo, 
+															telefono, 
+															mensaje) 
+								VALUES ('$nombre',
+										'$correo_electronico',
+										'$telefono',
+										'$mensaje' )";
+
+					mysqli_query($con, $query);// or die ("Problema conectando con la bd");
+
+					echo '<h2>Mensaje enviado correctamente</h2>';
+					echo "<br>";
+					echo '<h5>Nombre:  ';
+					echo $nombre;
+					echo '</h5>';
+					echo '<h5>Correo:  ';
+					echo $correo_electronico;
+					echo '</h5>';
+					echo '<h5>Teléfono:  ';
+					echo $telefono;
+					echo '</h5>';
+					echo '<h5>Mensaje:  ';
+					echo $mensaje;
+					echo '</h5><br><br><br>';
+
+					echo '<h4>Por favor,espere...</h4>';
+					header('refresh 3; url=index.php');
+					echo '</h5><br><br><br>';
+					?> 
+
 				</div>
-
 			</div>
-		</div>
-		<!-- //Features -->
-
-
+        </div>
+        <!-- Features -->
 	</div>
 	<!-- //Content -->
 
@@ -136,9 +126,9 @@ document.oncontextmenu = function(){return false;}
 				<div class="col-md-3 col-sm-3 footer-info-grid links">
 					<h4>ENLACES RÁPIDOS</h4>
 					<ul>
-						<li><a href="index.html">Biografía</a></li>
-						<li><a href="index.html">Trabajos</a></li>
-						<li><a href="index.html">Portafolio</a></li>
+						<li><a href="#biografia">Biografía</a></li>
+						<li><a href="#trabajos">Trabajos</a></li>
+						<li><a href="#portafolio">Portafolio</a></li>
 					</ul>
 				</div>
 				<div class="col-md-3 col-sm-3 footer-info-grid services">
