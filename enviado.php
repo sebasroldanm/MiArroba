@@ -1,13 +1,13 @@
 <?php
-	// session_start();
-	// error_reporting(0);
-	// $varsesion = $_POST['t_nombre'];
+	session_start();
+	error_reporting(0);
+	$varsesion = $_SESSION['nombre'];
 
-	// if($varsesion == null || $varsesion = ''){
-	// 	echo 'Usted no tiene autorizacion';
-    //     header("Refresh:3; url=index.php");
-	// 	die();
-	// }
+	if($varsesion == null || $varsesion = ''){
+		echo 'Usted no tiene autorizacion';
+        header("Refresh:3; url=index.php");
+		die();
+	}
 
 ?>
 
@@ -70,46 +70,28 @@ document.oncontextmenu = function(){return false;}
 				<h1>Mensaje Enviado</h1>
 				<div class="heading-underline"></div>
 				
-				<?php 
-					include_once('conex.php');
-
-					$nombre = $_POST['t_nombre']; 
-					$correo_electronico= $_POST['t_correo']; 
-					$telefono = $_POST['t_telefono']; 
-					$mensaje=$_POST['t_mensaje']; 
-
-					$con=mysqli_connect($host, $user, $pw, $bd);// or die("Problemas al conectar la base de datos");
-
-					$query = "INSERT INTO  tb_solicitudes (nombre, 
-															correo, 
-															telefono, 
-															mensaje) 
-								VALUES ('$nombre',
-										'$correo_electronico',
-										'$telefono',
-										'$mensaje' )";
-
-					mysqli_query($con, $query);// or die ("Problema conectando con la bd");
-
+				<?php
+				
 					echo '<h2>Mensaje enviado correctamente</h2>';
 					echo "<br>";
 					echo '<h5>Nombre:  ';
-					echo $nombre;
+					echo $_SESSION['nombre'];
 					echo '</h5>';
 					echo '<h5>Correo:  ';
-					echo $correo_electronico;
+					echo $_SESSION['correo'];
 					echo '</h5>';
 					echo '<h5>Teléfono:  ';
-					echo $telefono;
+					echo $_SESSION['telefono'];
 					echo '</h5>';
 					echo '<h5>Mensaje:  ';
-					echo $mensaje;
+					echo $_SESSION['mensaje'];
 					echo '</h5><br><br><br>';
 
 					echo '<h4>Por favor,espere...</h4>';
-					header('refresh 3; url=index.php');
+
 					echo '</h5><br><br><br>';
-					?> 
+
+				?>
 
 				</div>
 			</div>
