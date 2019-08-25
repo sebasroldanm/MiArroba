@@ -1,13 +1,13 @@
 <?php
-	session_start();
-	error_reporting(0);
-	$varsesion = $_POST['t_nombre'];
+	// session_start();
+	// error_reporting(0);
+	// $varsesion = $_POST['t_nombre'];
 
-	if($varsesion == null || $varsesion = ''){
-		echo 'Usted no tiene autorizacion';
-        header("Refresh:3; url=index.php");
-		die();
-	}
+	// if($varsesion == null || $varsesion = ''){
+	// 	echo 'Usted no tiene autorizacion';
+    //     header("Refresh:3; url=index.php");
+	// 	die();
+	// }
 
 ?>
 
