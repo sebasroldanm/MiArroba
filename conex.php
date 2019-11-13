@@ -1,13 +1,13 @@
 <?php
 
-$host = "localhost";
-$user = "root";
-$pw = "";
-$bd = "test_yohanroldan";
+// $host = "localhost";
+// $user = "root";
+// $pw = "";
+// $bd = "test_yohanroldan";
 
-// $host = "mysql.webcindario.com";
-// $user = "yohanroldan";
-// $pw = "xevitax2012";
-// $bd = "yohanroldan";
+$host = "sql209.eshost.com.ar";
+$user = "eshos_18530587";
+$pw = "fxgysw3r";
+$bd = "eshos_18530587_principal";
 
 ?>
