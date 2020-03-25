@@ -233,6 +233,25 @@ document.oncontextmenu = function(){return false;}
 						</div>
 					</div>
 
+					<div class="col-md-4 feature1 slideanim">
+						<div class="row features-item sans-shadow text-center">
+							<div class="features-icon">
+								<img src="images/f6.png" alt="Cubicle">
+							</div>
+							<div class="features-info">
+								<!--<h4>*****</h4>
+								<p>*****<BR>-->
+								<h4>Modelación</h4>
+								<p>Formulario Algorítmo Producto Medio<BR>
+								<a href="Modelacion"><FONT color="gris">Visitar</a>
+								<!--<a href="ejercicios/guia1/ejercicio1.html"><FONT color="gris">Ver</a> <br>  AQIO VA ->- <a href="pdfs/guia1/ejercicio1HTML.pdf"><FONT color="gris">DescargarHTML </a><a href="pdfs/guia1/ejercicio1PHP.pdf"> <FONT color="gris">DescargarPHP</a></p>
+								<p>Ejercicio 2<BR><a href="ejercicios/guia1/ejercicio2.html"><FONT color="gris">Ver</a> <a href="pdfs/guia1/ejercicio2HTML.pdf"><FONT color="gris">DescargarHTML</a> <a href="pdfs/guia1/ejercicio2PHP.pdf"><FONT color="gris">DescargarPHP</a></p>
+								<p>Ejercicio 3<BR><a href="ejercicios/guia1/ejercicio3.html"><FONT color="gris">Ver</a> <a href="pdfs/guia1/ejercicio3HTML.pdf"><FONT color="gris">DescargarHTML</a> <a href="pdfs/guia1/ejercicio3PHP.pdf"><FONT color="gris">DescargarPHP</a></p>-->
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+
 
 					<div class="clearfix"></div>
 				</div>
