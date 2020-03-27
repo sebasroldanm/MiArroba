@@ -26,54 +26,48 @@
                 <form action="index.php" method="POST">
                     <div class="form-group">
                         <label for="number">Semilla 1</label>
-                        <input type="number" class="form-control" placeholder="Valor de la semilla 1" name="input_semilla1">
+                        <input type="number" class="form-control" placeholder="Valor de la semilla 1 (5015 por defecto)" name="input_semilla1">
                     </div>
                     <div class="form-group">
                         <label for="number">Semilla 2</label>
-                        <input type="number" class="form-control" placeholder="Valor de la semilla 2" name="input_semilla2">
+                        <input type="number" class="form-control" placeholder="Valor de la semilla 2 (5734 por defecto)" name="input_semilla2">
                     </div>
                     <div class="form-group">
                         <label for="number">Numero de Iteraciones</label>
                         <input type="number" class="form-control" placeholder="Por defecto 30" name="input_iteraciones">
                     </div>
                     <button type="submit" class="btn btn-success" name="calcular">Calcular</button>
-                    <input type="button" value="Limpiar" class="btn btn-outline-info" onclick="window.location='javascript:location.reload()'">
+                    <input type="button" value="Limpiar" class="btn btn-outline-info" onclick="window.location='https://yohanroldan.webcindario.com/Modelacion/'">
                 </form>
 
             </div>
 
             <div class="col-sm-8">
                 <h2>Tabla de Resultados</h2>
-                <p>Se determino que este modelo no repite una secuencia:</p>
+                <p>Se determino que este modelo no repite una secuencia</p>
 
-                <table class="table table-dark table-hover">
-                    <thead>
-                        <tr>
-                            <th>Números</th>
-                            <th>Resultado</th>
-                            <th>Reducido</th>
-                            <th>Decimal</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                <?php
+                include("algoritmo.php");
+                if (isset($_REQUEST['calcular'])) {
+                    $n1 = $_REQUEST['input_semilla1'];
+                    $n2 = $_REQUEST['input_semilla2'];
+                    $ite = $_REQUEST['input_iteraciones'];
 
-                        <?php
-                        include("algoritmo.php");
-                        if (isset($_REQUEST['calcular'])) {
-                            $n1 = $_REQUEST['input_semilla1'];
-                            $n2 = $_REQUEST['input_semilla2'];
-                            $ite = $_REQUEST['input_iteraciones'];
+                    if (empty($n1)) {
+                        $n1 = 5015;
+                    }
+                    if (empty($n2)) {
+                        $n2 = 5734;
+                    }
+                    if (empty($ite)) {
+                        $ite = 30;
+                    }
+                    
 
-                            if (empty($ite)) {
-                                $ite = 30;
-                            }
+                    algoritmo::resolver($n1, $n2, $ite);
+                }
+                ?>
 
-                            algoritmo::resolver($n1, $n2, $ite);
-                        }
-                        ?>
-
-                    </tbody>
-                </table>
             </div>
         </div>
 

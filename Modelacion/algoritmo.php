@@ -27,18 +27,44 @@ class algoritmo
                 array_push($semilla2, $res_reducido[$i]);
             }
         }
-
-
-        for ($i = 0; $i < $itera; $i++) {
 ?>
-            <tr>
-                <td><?php echo ("\n(" . $semilla1[$i] . ")(" . $semilla2[$i] . ")"); ?></td>
-                <td><?php echo ($resultado[$i]); ?></td>
-                <td><?php echo ($res_reducido[$i]); ?></td>
-                <td><?php echo (round($res_decimal[$i], 4)); ?></td>
-            </tr>
-<?php
+        <div class="row">
+            <div class="col-sm-6">Aleatorio Minino:
+                <?php echo min($res_decimal); ?>
+            </div>
+            <div class="col-sm-6">Aleatorio Máximo:
+                <?php echo max($res_decimal) ?>
+            </div>
+        </div>
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th>Iteraciones</th>
+                    <th>Y</th>
+                    <th>Resultado</th>
+                    <th>Reducido</th>
+                    <th>Aleatorio</th>
+                </tr>
+            </thead>
+            <tbody>
 
-        }
+                <?php
+                for ($i = 0; $i < $itera; $i++) {
+                    $iteraciones = $i + 1;
+                ?>
+
+                    <tr>
+                        <td><?php echo $iteraciones ?></td>
+                        <td><?php echo ("\n(" . $semilla1[$i] . ")(" . $semilla2[$i] . ")"); ?></td>
+                        <td><?php echo ($resultado[$i]); ?></td>
+                        <td><?php echo ($res_reducido[$i]); ?></td>
+                        <td><?php echo (round($res_decimal[$i], 4)); ?></td>
+                    </tr>
+                <?php
+                }
+                ?>
+            </tbody>
+        </table>
+<?php
     }
 }
