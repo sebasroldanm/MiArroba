@@ -29,13 +29,25 @@ class algoritmo
         }
 ?>
         <div class="row">
-            <div class="col-sm-6">Aleatorio Minino:
-                <?php echo min($res_decimal); ?>
+
+            <div class="col-sm-6">
+                <div class="mx-auto" style="width: 200px;">
+                    Aleatorio Minino:
+                    <span class="badge badge-dark">
+                        <?php echo min($res_decimal); ?>
+                    </span>
+                </div>
             </div>
-            <div class="col-sm-6">Aleatorio Máximo:
-                <?php echo max($res_decimal) ?>
+            <div class="col-sm-6">
+                <div class="mx-auto" style="width: 200px;">
+                    Aleatorio Máximo:
+                    <span class="badge badge-dark">
+                        <?php echo max($res_decimal) ?>
+                    </span>
+                </div>
             </div>
         </div>
+        <hr>
         <table class="table table-dark table-hover">
             <thead>
                 <tr>
