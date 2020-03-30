@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
     <!-- Boostrap -->
-    
+
     <!-- Semantic UI -->
     <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
@@ -106,7 +106,47 @@
 
             </div>
         </div>
-
 </body>
+
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+        <!-- Call to action -->
+        <ul class="list-unstyled list-inline text-center py-2">
+            <li class="list-inline-item">
+                <h5 class="mb-1">Yohan Sebastian Roldan</h5>
+            </li>
+            <li class="list-inline-item">
+                <h5 class="mb-1"> - Cod. 461215161</h5>
+            </li>
+            <li class="list-inline-item">
+                <h5 class="mb-1"> - Modelación</h5>
+            </li>
+            <hr>
+            <li class="list-inline-item">
+                <p>Len
+                    guaje:</p>
+            </li>
+            <li class="list-inline-item">
+                <p> php - JQuery</p>
+            </li>
+
+        </ul>
+        <!-- Call to action -->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <!-- <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+    </div> -->
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 
 </html>
