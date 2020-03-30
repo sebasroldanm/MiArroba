@@ -48,8 +48,8 @@ class algoritmo
             </div>
         </div>
         <hr>
-        <table class="table table-dark table-hover">
-            <thead>
+        <table id="example" class="table table-hover dt-responsive nowrap" style="width:100%">
+            <thead class="thead-light">
                 <tr>
                     <th>Iteraciones</th>
                     <th>Y</th>
