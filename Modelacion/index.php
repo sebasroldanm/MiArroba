@@ -127,8 +127,7 @@
             </li>
             <hr>
             <li class="list-inline-item">
-                <p>Len
-                    guaje:</p>
+                <p>Lenguaje:</p>
             </li>
             <li class="list-inline-item">
                 <p> php - JQuery</p>

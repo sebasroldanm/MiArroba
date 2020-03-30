@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 class algoritmo
 {
     public static function resolver($num1, $num2, $itera)
@@ -30,7 +31,7 @@ class algoritmo
 ?>
         <div class="row">
 
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <div class="mx-auto" style="width: 200px;">
                     Aleatorio Minino:
                     <span class="badge badge-dark">
@@ -38,11 +39,19 @@ class algoritmo
                     </span>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <div class="mx-auto" style="width: 200px;">
                     Aleatorio Máximo:
                     <span class="badge badge-dark">
                         <?php echo max($res_decimal) ?>
+                    </span>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="mx-auto" style="width: 200px;">
+                    Promedio:
+                    <span class="badge badge-dark">
+                        <?php echo round(array_sum($res_decimal)/count($res_decimal), 6) ?>
                     </span>
                 </div>
             </div>
@@ -64,13 +73,19 @@ class algoritmo
                 for ($i = 0; $i < $itera; $i++) {
                     $iteraciones = $i + 1;
                 ?>
-
                     <tr>
                         <td><?php echo $iteraciones ?></td>
                         <td><?php echo ("\n(" . $semilla1[$i] . ")(" . $semilla2[$i] . ")"); ?></td>
                         <td><?php echo ($resultado[$i]); ?></td>
                         <td><?php echo ($res_reducido[$i]); ?></td>
-                        <td><?php echo (round($res_decimal[$i], 4)); ?></td>
+                        <td><?php 
+                        if(count(str_split($res_decimal[$i]))  > 5){
+                            echo (round($res_decimal[$i], 4)); 
+                        }
+                        else{
+                            echo (round($res_decimal[$i], 4))."0"; 
+                        }
+                        ?></td>
                     </tr>
                 <?php
                 }
