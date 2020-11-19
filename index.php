@@ -3,185 +3,204 @@ $varsesion = null;
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="google-site-verification" content="chjjmMO5P0fEo63SPIxtxmFJdzI3wq-7zEWF4oGcM80" />
-<title>Yohan Roldan</title>
 
-<!-- For-Mobile-Apps -->
+<head>
+	<meta name="google-site-verification" content="chjjmMO5P0fEo63SPIxtxmFJdzI3wq-7zEWF4oGcM80" />
+	<title>Yohan Roldan</title>
+
+	<!-- For-Mobile-Apps -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Yohan Roldan Web, Desarrollo Web, PHP, Fotografía, Yohan Roldan" />
-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //For-Mobile-Apps -->
+	<script type="application/x-javascript">
+		addEventListener("load", function() {
+			setTimeout(hideURLbar, 0);
+		}, false);
 
-<!-- Custom-Theme-Files -->
-	<!-- Bootstrap-Core-CSS --> <link href="css/bootstrap.min.css" rel="stylesheet">
-	<!-- Style.CSS --> <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- Owl-Carousel-CSS --> <link href="css/owl.carousel.css" rel="stylesheet">
-	<!-- Swipe-Box-CSS --> <link rel="stylesheet" href="css/swipebox.css">
-	<!-- Animate-CSS --> <link href="css/animate.min.css" rel="stylesheet">
-<!-- //Custom-Theme-Files -->
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //For-Mobile-Apps -->
 
-<script>
-	$(function() {
-		$(".meter > span").each(function() {
-			$(this)
-			.data("origWidth", $(this).width())
-			.width(0)
-			.animate({
-				width: $(this).data("origWidth")
-			}, 1200);
+	<!-- Custom-Theme-Files -->
+	<!-- Bootstrap-Core-CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Style.CSS -->
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- Owl-Carousel-CSS -->
+	<link href="css/owl.carousel.css" rel="stylesheet">
+	<!-- Swipe-Box-CSS -->
+	<link rel="stylesheet" href="css/swipebox.css">
+	<!-- Animate-CSS -->
+	<link href="css/animate.min.css" rel="stylesheet">
+	<!-- //Custom-Theme-Files -->
+
+	<script>
+		$(function() {
+			$(".meter > span").each(function() {
+				$(this)
+					.data("origWidth", $(this).width())
+					.width(0)
+					.animate({
+						width: $(this).data("origWidth")
+					}, 1200);
+			});
 		});
-	});
-</script>
+	</script>
 
-<!-- Web-Fonts -->
+	<!-- Web-Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
 	<link href='//fonts.googleapis.com/css?family=Raleway:400,500,600,700,800' rel='stylesheet' type='text/css'>
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-<!-- //Web-Fonts -->
-<meta name="google-site-verification" content="_FyjKrVPw6pr6ZCtmO1AyOe7eMtt8zxAI4rPfnv_wQE" />
-<script type="text/javascript">
-document.oncontextmenu = function(){return false;}
-</script>
+	<!-- //Web-Fonts -->
+	<meta name="google-site-verification" content="_FyjKrVPw6pr6ZCtmO1AyOe7eMtt8zxAI4rPfnv_wQE" />
+	<script type="text/javascript">
+		document.oncontextmenu = function() {
+			return false;
+		}
+	</script>
 </head>
+
 <body>
+
 	<body ondragstart="return false" onselectstart="return false" oncontextmenu="return false">
 
-<!--<script language='JavaScript'>window.open('http://www.chenico.com', 'geoflotante', '');</script>-->    <!--abrir de una vez otra pestaña-->
-	<!-- Header -->
-	<div class="header">
+		<!--<script language='JavaScript'>window.open('http://www.chenico.com', 'geoflotante', '');</script>-->
+		<!--abrir de una vez otra pestaña-->
+		<!-- Header -->
+		<div class="header">
 
-		<div class="container">
+			<div class="container">
 
-			<!-- Navigation -->
-			<nav class="navbar navbar-inverse navbar-default">
+				<!-- Navigation -->
+				<nav class="navbar navbar-inverse navbar-default">
 
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Navegación</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Logo -->
-					<div class="logo">
-						<a class="navbar-brand button" href="#">Yohan Roldan</a>
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Navegación</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Logo -->
+						<div class="logo">
+							<a class="navbar-brand button" href="#">Yohan Roldan</a>
+						</div>
+						<!-- //Logo -->
 					</div>
-					<!-- //Logo -->
-				</div>
 
-				<div id="navbar" class="navbar-collapse navbar-right collapse">
-					<ul class="nav navbar-nav navbar-right cross-effect" id="cross-effect">
-						
-						<li><a class="cross-effect" href="#biografia">Biografía</a></li>
-						<li><a class="cross-effect" href="#trabajos">Trabajos</a></li>
-						<li><a class="cross-effect" href="#portafolio">Portafolio</a></li>
-						<!--<li><a class="cross-effect" href="#skills">Skills</a></li>
+					<div id="navbar" class="navbar-collapse navbar-right collapse">
+						<ul class="nav navbar-nav navbar-right cross-effect" id="cross-effect">
+
+							<li><a class="cross-effect" href="#biografia">Biografía</a></li>
+							<li><a class="cross-effect" href="#trabajos">Trabajos</a></li>
+							<li><a class="cross-effect" href="#portafolio">Portafolio</a></li>
+							<!--<li><a class="cross-effect" href="#skills">Skills</a></li>
 						<li><a class="cross-effect" href="#stats">Stats</a></li>
 						<li><a class="cross-effect" href="#team">Team</a></li>-->
-						<li><a class="cross-effect" href="#contacto">Contacto</a></li>
-					</ul>
-				</div><!-- //Navbar-Collapse -->
+							<li><a class="cross-effect" href="#contacto">Contacto</a></li>
+						</ul>
+					</div><!-- //Navbar-Collapse -->
 
-			</nav>
-			<!-- //Navigation -->
-
-		</div>
-		<!-- //Container -->
-
-		<!-- Carousel -->
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-			<div class="carousel-inner" role="listbox">
-				<div class="item active">
-					<img class="first-slide" src="images/1.jpg" alt="Cubicle">
-					<div class="slider-grid-bg">
-						<div class="slider-grid-text">
-							<h5>Desarrollo PHP</h5>
-							<div class="border"></div>
-							<p>Desarrollo Web responsive, o diseño adaptable a multiples plataformas.</p>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<img class="second-slide" src="images/2.jpg" alt="Cubicle">
-					<div class="slider-grid-bg">
-						<div class="slider-grid-text">
-							<h5>Desarrollo en ASP.NET</h5>
-							<div class="border"></div>
-							<p>Desarrollo en Plataformas mas robustas con Servicios Web.</p>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<img class="fifth-slide" src="images/5.jpg" alt="Cubicle">
-					<div class="slider-grid-bg">
-						<div class="slider-grid-text">
-							<h5>Fotografía</h5>
-							<div class="border"></div>
-							<p>Intento plasmar un arte enmarcado en 4.8".</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<nav class="nav-diamond">
-				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-					<span class="icon-wrap" aria-hidden="true"></span>
-					<div class="left-arrow">
-						<img src="images/hover-left.png" alt="Cubicle"/>
-					</div>
-				</a>
-				<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-					<span class="icon-wrap" aria-hidden="true"></span>
-					<div class="right-arrow">
-						<img src="images/hover-right.png" alt="Cubicle"/>
-					</div>
-				</a>
-			</nav>
-
-		</div>
-		<!-- //Carousel -->
-
-	</div>
-	<!-- //Header -->
-
-	<!-- Content -->
-	<div class="content">
-
-		<!-- About -->
-		<div class="about" id="biografia">
-			<div class="container">
-
-				<h3 class="slideanim">Biografía </h3>
-				<div class="heading-underline"></div>
-
-				<p class="slideanim">Soy estudiante de Ingeniería de Sistemas de la Universidad de Cundinamarca, desempeño proyectos como desarrollo Web en conjunto con los docentes de la UdeC y también como reto personal en la cual quiero desempeñar el rol de un ingeniero eficiente como objetivo principal exponer al mundo mis ideas innovadoras frente al mundo Android y la Fotografía.</p>
-				<div class="social slideanim">
-					<ul class="social-icons slideanim">
-						<li><a href="https://www.facebook.com/Johan.Sebastian.Roldan" class="facebook" title="Ir a mi Facebook" target="_blank"></a></li>
-						<!--<li><a href="#" class="twitter" title="Go to Our Twitter Account"></a></li>-->
-						<li><a href="https://plus.google.com/u/0/+JohanSebastianRoldanMoreno" class="googleplus" title="I a mi Google Plus" target="_blank" ></a></li>
-						<li><a href="https://www.instagram.com/johaan_sebastian/" class="instagram" title="Ir a mi Instagram" target="_blank"></a></li>
-						<li><a href="https://www.youtube.com/channel/UC1cf9HajUUMclNEkAdupyCg/" class="youtube" title="Ir a mi Canal Youtube" target="_blank"></a></li>
-					</ul>
-				</div>
+				</nav>
+				<!-- //Navigation -->
 
 			</div>
+			<!-- //Container -->
+
+			<!-- Carousel -->
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<img class="first-slide" src="images/1.jpg" alt="Cubicle">
+						<div class="slider-grid-bg">
+							<div class="slider-grid-text">
+								<h5>Desarrollo PHP</h5>
+								<div class="border"></div>
+								<p>Desarrollo Web responsive, o diseño adaptable a multiples plataformas.</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<img class="second-slide" src="images/2.jpg" alt="Cubicle">
+						<div class="slider-grid-bg">
+							<div class="slider-grid-text">
+								<h5>Desarrollo en ASP.NET</h5>
+								<div class="border"></div>
+								<p>Desarrollo en Plataformas mas robustas con Servicios Web.</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<img class="fifth-slide" src="images/5.jpg" alt="Cubicle">
+						<div class="slider-grid-bg">
+							<div class="slider-grid-text">
+								<h5>Fotografía</h5>
+								<div class="border"></div>
+								<p>Intento plasmar un arte enmarcado en 4.8".</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<nav class="nav-diamond">
+					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+						<span class="icon-wrap" aria-hidden="true"></span>
+						<div class="left-arrow">
+							<img src="images/hover-left.png" alt="Cubicle" />
+						</div>
+					</a>
+					<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+						<span class="icon-wrap" aria-hidden="true"></span>
+						<div class="right-arrow">
+							<img src="images/hover-right.png" alt="Cubicle" />
+						</div>
+					</a>
+				</nav>
+
+			</div>
+			<!-- //Carousel -->
+
 		</div>
-		<!-- //About -->
+		<!-- //Header -->
 
-		<!-- Features -->
-		<div class="features" id="trabajos">
-			<div class="container">
+		<!-- Content -->
+		<div class="content">
 
-				<h1>Trabajos</h1>
-				<div class="heading-underline"></div>
+			<!-- About -->
+			<div class="about" id="biografia">
+				<div class="container">
 
-				<h2>Puede encontrar la <span>pre-visualización</span> del trabajo y/o su <span>descarga</span>.</h2>
-				<div class="feature-grid">
-					<!--<div class="col-md-4 feature1 slideanim">
+					<h3 class="slideanim">Biografía </h3>
+					<div class="heading-underline"></div>
+
+					<p class="slideanim">Soy estudiante de Ingeniería de Sistemas de la Universidad de Cundinamarca, desempeño proyectos como desarrollo Web en conjunto con los docentes de la UdeC y también como reto personal en la cual quiero desempeñar el rol de un ingeniero eficiente como objetivo principal exponer al mundo mis ideas innovadoras frente al mundo Android y la Fotografía.</p>
+					<div class="social slideanim">
+						<ul class="social-icons slideanim">
+							<li><a href="https://www.facebook.com/Johan.Sebastian.Roldan" class="facebook" title="Ir a mi Facebook" target="_blank"></a></li>
+							<!--<li><a href="#" class="twitter" title="Go to Our Twitter Account"></a></li>-->
+							<li><a href="https://plus.google.com/u/0/+JohanSebastianRoldanMoreno" class="googleplus" title="I a mi Google Plus" target="_blank"></a></li>
+							<li><a href="https://www.instagram.com/johaan_sebastian/" class="instagram" title="Ir a mi Instagram" target="_blank"></a></li>
+							<li><a href="https://www.youtube.com/channel/UC1cf9HajUUMclNEkAdupyCg/" class="youtube" title="Ir a mi Canal Youtube" target="_blank"></a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			<!-- //About -->
+
+			<!-- Features -->
+			<div class="features" id="trabajos">
+				<div class="container">
+
+					<h1>Trabajos</h1>
+					<div class="heading-underline"></div>
+
+					<h2>Puede encontrar la <span>pre-visualización</span> del trabajo y/o su <span>descarga</span>.</h2>
+					<div class="feature-grid">
+						<!--<div class="col-md-4 feature1 slideanim">
 						<div class="row features-item sans-shadow text-center">
 							<div class="features-icon">
 								<img src="images/f1.png" alt="Cubicle">
@@ -193,7 +212,7 @@ document.oncontextmenu = function(){return false;}
 							<div class="clearfix"></div>
 						</div><!-- //Row -->
 					</div>
-					
+
 					<div class="col-md-4 feature1 slideanim">
 						<div class="row features-item sans-shadow text-center">
 							<div class="features-icon">
@@ -204,8 +223,10 @@ document.oncontextmenu = function(){return false;}
 								<p>*****<BR>-->
 								<h4>Comunicación de Datos II</h4>
 								<p>Página Web Visualización de datos Arduino<BR>
-								<a href="ComunicacionDeDatosII/Arduino/"><FONT color="gris">Visitar</a>
-								<!--<a href="ejercicios/guia1/ejercicio1.html"><FONT color="gris">Ver</a> <br>  AQIO VA ->- <a href="pdfs/guia1/ejercicio1HTML.pdf"><FONT color="gris">DescargarHTML </a><a href="pdfs/guia1/ejercicio1PHP.pdf"> <FONT color="gris">DescargarPHP</a></p>
+									<a href="ComunicacionDeDatosII/Arduino/">
+										<FONT color="gris">Visitar
+									</a>
+									<!--<a href="ejercicios/guia1/ejercicio1.html"><FONT color="gris">Ver</a> <br>  AQIO VA ->- <a href="pdfs/guia1/ejercicio1HTML.pdf"><FONT color="gris">DescargarHTML </a><a href="pdfs/guia1/ejercicio1PHP.pdf"> <FONT color="gris">DescargarPHP</a></p>
 								<p>Ejercicio 2<BR><a href="ejercicios/guia1/ejercicio2.html"><FONT color="gris">Ver</a> <a href="pdfs/guia1/ejercicio2HTML.pdf"><FONT color="gris">DescargarHTML</a> <a href="pdfs/guia1/ejercicio2PHP.pdf"><FONT color="gris">DescargarPHP</a></p>
 								<p>Ejercicio 3<BR><a href="ejercicios/guia1/ejercicio3.html"><FONT color="gris">Ver</a> <a href="pdfs/guia1/ejercicio3HTML.pdf"><FONT color="gris">DescargarHTML</a> <a href="pdfs/guia1/ejercicio3PHP.pdf"><FONT color="gris">DescargarPHP</a></p>-->
 							</div>
@@ -224,8 +245,10 @@ document.oncontextmenu = function(){return false;}
 								<p>*****<BR>-->
 								<h4>Comunicación de Datos II</h4>
 								<p>Página Web Visualización de Foto<BR>
-								<a href="ComunicacionDeDatosII/Foto/"><FONT color="gris">Visitar</a>
-								<!--<a href="ejercicios/guia1/ejercicio1.html"><FONT color="gris">Ver</a> <br>  AQIO VA ->- <a href="pdfs/guia1/ejercicio1HTML.pdf"><FONT color="gris">DescargarHTML </a><a href="pdfs/guia1/ejercicio1PHP.pdf"> <FONT color="gris">DescargarPHP</a></p>
+									<a href="ComunicacionDeDatosII/Foto/">
+										<FONT color="gris">Visitar
+									</a>
+									<!--<a href="ejercicios/guia1/ejercicio1.html"><FONT color="gris">Ver</a> <br>  AQIO VA ->- <a href="pdfs/guia1/ejercicio1HTML.pdf"><FONT color="gris">DescargarHTML </a><a href="pdfs/guia1/ejercicio1PHP.pdf"> <FONT color="gris">DescargarPHP</a></p>
 								<p>Ejercicio 2<BR><a href="ejercicios/guia1/ejercicio2.html"><FONT color="gris">Ver</a> <a href="pdfs/guia1/ejercicio2HTML.pdf"><FONT color="gris">DescargarHTML</a> <a href="pdfs/guia1/ejercicio2PHP.pdf"><FONT color="gris">DescargarPHP</a></p>
 								<p>Ejercicio 3<BR><a href="ejercicios/guia1/ejercicio3.html"><FONT color="gris">Ver</a> <a href="pdfs/guia1/ejercicio3HTML.pdf"><FONT color="gris">DescargarHTML</a> <a href="pdfs/guia1/ejercicio3PHP.pdf"><FONT color="gris">DescargarPHP</a></p>-->
 							</div>
@@ -243,8 +266,10 @@ document.oncontextmenu = function(){return false;}
 								<p>*****<BR>-->
 								<h4>Modelación</h4>
 								<p>Formulario Algorítmo Producto Medio<BR>
-								<a href="Modelacion"><FONT color="gris">Visitar</a>
-								<!--<a href="ejercicios/guia1/ejercicio1.html"><FONT color="gris">Ver</a> <br>  AQIO VA ->- <a href="pdfs/guia1/ejercicio1HTML.pdf"><FONT color="gris">DescargarHTML </a><a href="pdfs/guia1/ejercicio1PHP.pdf"> <FONT color="gris">DescargarPHP</a></p>
+									<a href="Modelacion">
+										<FONT color="gris">Visitar
+									</a>
+									<!--<a href="ejercicios/guia1/ejercicio1.html"><FONT color="gris">Ver</a> <br>  AQIO VA ->- <a href="pdfs/guia1/ejercicio1HTML.pdf"><FONT color="gris">DescargarHTML </a><a href="pdfs/guia1/ejercicio1PHP.pdf"> <FONT color="gris">DescargarPHP</a></p>
 								<p>Ejercicio 2<BR><a href="ejercicios/guia1/ejercicio2.html"><FONT color="gris">Ver</a> <a href="pdfs/guia1/ejercicio2HTML.pdf"><FONT color="gris">DescargarHTML</a> <a href="pdfs/guia1/ejercicio2PHP.pdf"><FONT color="gris">DescargarPHP</a></p>
 								<p>Ejercicio 3<BR><a href="ejercicios/guia1/ejercicio3.html"><FONT color="gris">Ver</a> <a href="pdfs/guia1/ejercicio3HTML.pdf"><FONT color="gris">DescargarHTML</a> <a href="pdfs/guia1/ejercicio3PHP.pdf"><FONT color="gris">DescargarPHP</a></p>-->
 							</div>
@@ -296,7 +321,7 @@ document.oncontextmenu = function(){return false;}
 								<div class="col-md-4 gallery-top">
 									<figure class="effect-bubba">
 										<a href="http://ellibertador.260mb.net/" target="_blank">
-											<img src="images/g5.jpg"/>
+											<img src="images/g5.jpg" />
 											<figcaption>
 												<h4>Firmware</h4>
 											</figcaption>
@@ -387,7 +412,7 @@ document.oncontextmenu = function(){return false;}
 							<p><a href="http://photoyohanroldan.eshost.com.ar" target="_blank">Visitame AQUÍ </a></p>
 						</section>
 						<!-- //Tab-4 -->
-						
+
 					</div><!-- //Content -->
 				</div><!-- //Tabs -->
 
@@ -575,7 +600,7 @@ document.oncontextmenu = function(){return false;}
 				</div>
 				<!-- //Screen-Gallery-Carousel -->
 
-			</div>
+		</div>
 		</div>
 		<!-- Skills -->
 
@@ -681,41 +706,41 @@ document.oncontextmenu = function(){return false;}
 		</div>
 		<!-- //Contact -->
 
-	</div>
-	<!-- //Content -->
+		</div>
+		<!-- //Content -->
 
-	<!-- Footer -->
-	<div class="footer">
-		<div class="container">
+		<!-- Footer -->
+		<div class="footer">
+			<div class="container">
 
-			<div class="footer-info slideanim">
-				<div class="col-md-3 col-sm-3 footer-info-grid links">
-					<h4>ENLACES RÁPIDOS</h4>
-					<ul>
-						<li><a href="#biografia">Biografía</a></li>
-						<li><a href="#trabajos">Trabajos</a></li>
-						<li><a href="#portafolio">Portafolio</a></li>
-					</ul>
-				</div>
-				<div class="col-md-3 col-sm-3 footer-info-grid services">
-					<h4>PORTAFOLIO</h4>
-					<ul>
-						<li>Desarrollo Web</li>
-						<li>Desarrollo Android</li>
-						<li>Fotografía</li>
-					</ul>
-				</div>
-				<div class="col-md-3 col-sm-3 footer-info-grid address">
-					<h4>CONTACTO</h4>
-					<address>
+				<div class="footer-info slideanim">
+					<div class="col-md-3 col-sm-3 footer-info-grid links">
+						<h4>ENLACES RÁPIDOS</h4>
 						<ul>
-							<li>Facatativá, Colombia</li>
-							<li>Celular:(+57) 300 527 5028</li>
+							<li><a href="#biografia">Biografía</a></li>
+							<li><a href="#trabajos">Trabajos</a></li>
+							<li><a href="#portafolio">Portafolio</a></li>
 						</ul>
-						<p>Email:<a class="mail" href="contrato@yohanroldan.eshost.com.ar">contrato@yohanroldan.eshost.com.ar</a></p>
-					</address>
-				</div>
-				<!--<div class="col-md-3 col-sm-3 footer-info-grid email">
+					</div>
+					<div class="col-md-3 col-sm-3 footer-info-grid services">
+						<h4>PORTAFOLIO</h4>
+						<ul>
+							<li>Desarrollo Web</li>
+							<li>Desarrollo Android</li>
+							<li>Fotografía</li>
+						</ul>
+					</div>
+					<div class="col-md-3 col-sm-3 footer-info-grid address">
+						<h4>CONTACTO</h4>
+						<address>
+							<ul>
+								<li>Facatativá, Colombia</li>
+								<li>Celular:(+57) 300 527 5028</li>
+							</ul>
+							<p>Email:<a class="mail" href="contrato@yohanroldan.eshost.com.ar">contrato@yohanroldan.eshost.com.ar</a></p>
+						</address>
+					</div>
+					<!--<div class="col-md-3 col-sm-3 footer-info-grid email">
 					<h4>NEWSLETTER</h4>
 					<p>Subscribe to our newsletter and we will inform you about newest projects and promotions.
 					</p>
@@ -725,123 +750,130 @@ document.oncontextmenu = function(){return false;}
 						<input type="submit" class="submit" value="">
 					</form>
 				</div>-->
-				<div class="clearfix"></div>
+					<div class="clearfix"></div>
+				</div>
+
+				<div class="copyright slideanim">
+					<p>&copy; <w id="fecha"></w>. Todos los derechos reservados | Desarrollado por <a href="https://www.facebook.com/Johan.Sebastian.Roldan"> Yohan Roldan </a></p>
+				</div>
+
 			</div>
+		</div>
+		<!-- //Footer -->
 
-			<div class="copyright slideanim">
-				<p>&copy; <w id="fecha"></w>. Todos los derechos reservados | Desarrollado por <a href="https://www.facebook.com/Johan.Sebastian.Roldan"> Yohan Roldan </a></p>
-			</div>
+		<!-- Custom-JavaScript-File-Links -->
+		<!-- Supportive-JavaScript -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<!-- Necessary-JavaScript-File-For-Bootstrap -->
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-		</div> 
-	</div>
-	<!-- //Footer -->
+		<!-- Slideanim-JavaScript -->
 
-<!-- Custom-JavaScript-File-Links -->
-	<!-- Supportive-JavaScript --> <script type="text/javascript" src="js/jquery.min.js"></script>
-	<!-- Necessary-JavaScript-File-For-Bootstrap --> <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-	<!-- Slideanim-JavaScript -->
-
-	<!--JavaScript Fecha automatica-->
-	<script type="text/javascript">
-		var ano = (new Date).getFullYear();
-	$(document).ready(function() {
-	  $("#fecha").text( ano );
-	});
-	</script>
-	<!--JavaScript Fecha automatica-->
-
-	<script type="text/javascript">
-		$(window).scroll(function() {
-	 		$(".slideanim").each(function(){
-				var pos = $(this).offset().top;
-				var winTop = $(window).scrollTop();
-					if (pos < winTop + 600) {
-					$(this).addClass("slide");
-				}
+		<!--JavaScript Fecha automatica-->
+		<script type="text/javascript">
+			var ano = (new Date).getFullYear();
+			$(document).ready(function() {
+				$("#fecha").text(ano);
 			});
-		});
-	</script>
-	<!-- //Slideanim-JavaScript -->
-
-	<!-- Gallery-Tab-JavaScript -->
-	<script src="js/cbpFWTabs.js"></script>
-	<script>
-		(function() {
-			[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
-				new CBPFWTabs( el );
-			});
-		})();
-	</script>
-	<!-- //Gallery-Tab-JavaScript -->
-
-	<!-- Swipe-Box-JavaScript -->
-		<script src="js/jquery.swipebox.min.js"></script> 
-			<script type="text/javascript">
-				jQuery(function($) {
-					$(".swipebox").swipebox();
-				});
 		</script>
-	<!-- //Swipe-Box-JavaScript -->
+		<!--JavaScript Fecha automatica-->
 
-	<!-- Owl-Carousel-JavaScript -->
-	<script src="js/owl.carousel.js"></script>
-	<script>
-		$(document).ready(function() {
-			$("#owl-demo").owlCarousel ({
-				items : 8,
-				lazyLoad : true,
-				autoPlay : true,
-				speed: 900,
-				pagination : false,
-			});
-		});
-	</script>
-	<!-- //Owl-Carousel-JavaScript -->
-
-	<!-- Slide-To-Top JavaScript (No-Need-To-Change) -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 100,
-				easingType: 'linear'
-			};
-			$().UItoTop({ easingType: 'easeOutQuart' });
-		});
-	</script>
-	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 0;"> </span></a>
-	<!-- //Slide-To-Top JavaScript -->
-
-	<!-- Smooth-Scrolling-JavaScript -->
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
-	<script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll, .navbar li a, .footer li a").click(function(event){
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		<script type="text/javascript">
+			$(window).scroll(function() {
+				$(".slideanim").each(function() {
+					var pos = $(this).offset().top;
+					var winTop = $(window).scrollTop();
+					if (pos < winTop + 600) {
+						$(this).addClass("slide");
+					}
 				});
 			});
-	</script>
-	<!-- //Smooth-Scrolling-JavaScript -->
+		</script>
+		<!-- //Slideanim-JavaScript -->
 
-	<!-- Skills-Animation-JavaScript -->
-	<script type="text/javascript" src="js/jquery.inview.min.js"></script>
-	<script type="text/javascript" src="js/wow.min.js"></script>
-	<script type="text/javascript" src="js/mousescroll.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-	<!-- //Skills-Animation-JavaScript -->
+		<!-- Gallery-Tab-JavaScript -->
+		<script src="js/cbpFWTabs.js"></script>
+		<script>
+			(function() {
+				[].slice.call(document.querySelectorAll('.tabs')).forEach(function(el) {
+					new CBPFWTabs(el);
+				});
+			})();
+		</script>
+		<!-- //Gallery-Tab-JavaScript -->
 
-	<script type="text/javascript" src="js/numscroller-1.0.js"></script>
+		<!-- Swipe-Box-JavaScript -->
+		<script src="js/jquery.swipebox.min.js"></script>
+		<script type="text/javascript">
+			jQuery(function($) {
+				$(".swipebox").swipebox();
+			});
+		</script>
+		<!-- //Swipe-Box-JavaScript -->
 
-<!-- //Custom-JavaScript-File-Links -->
+		<!-- Owl-Carousel-JavaScript -->
+		<script src="js/owl.carousel.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#owl-demo").owlCarousel({
+					items: 8,
+					lazyLoad: true,
+					autoPlay: true,
+					speed: 900,
+					pagination: false,
+				});
+			});
+		</script>
+		<!-- //Owl-Carousel-JavaScript -->
 
-<!-- Images are for reference and illustration puropse only. Images were taken from https://pixabay.com and icons were taken from www.flaticon.com and Portfolio section images were the sceenshots of templates by http://w3layouts.com -->
-<!-- Flaticon Links:
+		<!-- Slide-To-Top JavaScript (No-Need-To-Change) -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var defaults = {
+					containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 100,
+					easingType: 'linear'
+				};
+				$().UItoTop({
+					easingType: 'easeOutQuart'
+				});
+			});
+		</script>
+		<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 0;"> </span></a>
+		<!-- //Slide-To-Top JavaScript -->
+
+		<!-- Smooth-Scrolling-JavaScript -->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll, .navbar li a, .footer li a").click(function(event) {
+					event.preventDefault();
+					$('html,body').animate({
+						scrollTop: $(this.hash).offset().top
+					}, 1000);
+				});
+			});
+		</script>
+		<!-- //Smooth-Scrolling-JavaScript -->
+
+		<!-- Skills-Animation-JavaScript -->
+		<script type="text/javascript" src="js/jquery.inview.min.js"></script>
+		<script type="text/javascript" src="js/wow.min.js"></script>
+		<script type="text/javascript" src="js/mousescroll.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<!-- //Skills-Animation-JavaScript -->
+
+		<script type="text/javascript" src="js/numscroller-1.0.js"></script>
+
+		<!-- //Custom-JavaScript-File-Links -->
+
+		<!-- Images are for reference and illustration puropse only. Images were taken from https://pixabay.com and icons were taken from www.flaticon.com and Portfolio section images were the sceenshots of templates by http://w3layouts.com -->
+		<!-- Flaticon Links:
 	Icons made by "http://www.freepik.com" from "http://www.flaticon.com" is licensed by "http://creativecommons.org/licenses/by/3.0/" CC 3.0. BY
 -->
 
-</body>
+	</body>
+
 </html>
