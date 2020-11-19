@@ -835,7 +835,7 @@ $varsesion = null;
 						mensaje: '',
 						checked: false,
 						visible: false,
-						// msg: '',
+						msg: '',
 						url: '',
 					}
 				},
@@ -866,7 +866,11 @@ $varsesion = null;
 							let msg = 'El campo mensaje es requerido';
 							this.notifyError(msg);
 						}
-						if (this.nombre !== '' && this.correo !== '' && this.telefono !== '' && this.mensaje !== '' && this.mensaje !== '') {
+						if (this.checked === false) {
+							let msg = 'Debe aceptar los terminos y condiciones';
+							this.notifyWarning(msg);
+						}
+						if (this.nombre !== '' && this.correo !== '' && this.telefono !== '' && this.mensaje !== '' && this.mensaje !== '' && this.checked === true) {
 							let msg = 'Mensaje Enviado';
 							this.notifySuccess(msg);
 						}
@@ -880,6 +884,12 @@ $varsesion = null;
 					},
 					notifySuccess(msg) {
 						Notiflix.Notify.Success(msg, {
+							cssAnimationStyle: 'zoom',
+							cssAnimationDuration: 500,
+						})
+					},
+					notifyWarning(msg) {
+						Notiflix.Notify.Warning(msg, {
 							cssAnimationStyle: 'zoom',
 							cssAnimationDuration: 500,
 						})
