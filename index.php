@@ -8,6 +8,7 @@ $varsesion = null;
 	<meta name="google-site-verification" content="chjjmMO5P0fEo63SPIxtxmFJdzI3wq-7zEWF4oGcM80" />
 	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	<script src="../dist/notiflix-aio-2.6.0.min.js"></script>
 
 	<title>Yohan Roldan</title>
 
@@ -23,6 +24,34 @@ $varsesion = null;
 		function hideURLbar() {
 			window.scrollTo(0, 1);
 		}
+	</script>
+	<script>
+		// Notiflix.Notify.Init({
+		//   closeButton: true,
+		//   cssAnimationStyle: 'zoom',
+		//   cssAnimationDuration: 500,
+		//   messageMaxLength: 20,
+		//   plainText: false,
+		// });
+
+		// Notiflix.Report.Init({
+		//   width: '640px',
+		// });
+
+		// Notiflix.Confirm.Init({
+		//   // messageMaxLength: 1000,
+		//   // rtl: true,
+		//   position: 'center',
+		//   distance: '10px',
+		//   cssAnimationStyle: 'fade',
+		// });
+
+		Notiflix.Loading.Init({
+			clickToClose: true,
+			customSvgUrl: 'https://www.notiflix.com/content/media/icon/notiflix-loading-notiflix.svg',
+		});
+
+		console.log(Notiflix);
 	</script>
 	<!-- //For-Mobile-Apps -->
 
@@ -58,16 +87,18 @@ $varsesion = null;
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
 	<!-- //Web-Fonts -->
 	<meta name="google-site-verification" content="_FyjKrVPw6pr6ZCtmO1AyOe7eMtt8zxAI4rPfnv_wQE" />
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		document.oncontextmenu = function() {
 			return false;
 		}
-	</script>
+	</script> -->
 </head>
 
 <body>
 
-	<body ondragstart="return false" onselectstart="return false" oncontextmenu="return false">
+	<!-- <body ondragstart="return false" onselectstart="return false" oncontextmenu="return false"> -->
+
+	<body>
 
 		<!--<script language='JavaScript'>window.open('http://www.chenico.com', 'geoflotante', '');</script>-->
 		<!--abrir de una vez otra pestaña-->
@@ -687,7 +718,8 @@ $varsesion = null;
 				<h3>Contacto</h3>
 				<div class="heading-underline"></div>
 
-				<form class="contact_form slideanim" action="e.php" method="post" name="contacto" id="contacto" onsubmit="return checkForm(this);">
+				<!-- <form class="contact_form slideanim" action="e.php" method="post" name="contacto" id="contacto" onsubmit="return checkForm(this);"> -->
+				<form class="contact_form slideanim" id="contacto">
 
 					<div class="message">
 						<div class="col-md-6 col-sm-6 grid_6 c1">
@@ -803,35 +835,54 @@ $varsesion = null;
 						mensaje: '',
 						checked: false,
 						visible: false,
-						msg: ''
+						// msg: '',
+						url: '',
 					}
+				},
+				created() {
+					this.url = `${window.location.origin}/#contacto`
+					console.log(window.location.origin);
 				},
 				methods: {
 					mostrar() {
+
 						if (this.nombre === '') {
-							this.visible = !this.visible;
-							this.msg = 'El campo nombre es requerido';
+							let msg = 'El campo nombre es requerido';
+							this.notifyError(msg);
 						}
-						else if (this.correo === '') {
-							this.visible = !this.visible;
-							this.msg = 'El campo correo es requerido';
+						if (this.correo === '') {
+							let msg = 'El campo correo es requerido';
+							this.notifyError(msg);
 						}
-						else if (this.telefono === '') {
-							this.visible = !this.visible;
-							this.msg = 'El campo teléfono es requerido';
+						if (this.telefono === '') {
+							let msg = 'El campo teléfono es requerido';
+							this.notifyError(msg);
 						}
-						else if (this.mensaje === '') {
-							this.visible = !this.visible;
-							this.msg = 'El campo mensaje es requerido';
+						if (this.mensaje === '') {
+							let msg = 'El campo mensaje es requerido';
+							this.notifyError(msg);
 						}
-						else if (this.mensaje === '') {
-							this.visible = !this.visible;
-							this.msg = 'El campo mensaje es requerido';
+						if (this.mensaje === '') {
+							let msg = 'El campo mensaje es requerido';
+							this.notifyError(msg);
 						}
-						else {
-							this.visible = !this.visible;
-							this.msg = 'Mensaje enviado';
+						if (this.nombre !== '' && this.correo !== '' && this.telefono !== '' && this.mensaje !== '' && this.mensaje !== '') {
+							let msg = 'Mensaje Enviado';
+							this.notifySuccess(msg);
 						}
+					},
+
+					notifyError(msg) {
+						Notiflix.Notify.Failure(msg, {
+							cssAnimationStyle: 'zoom',
+							cssAnimationDuration: 500,
+						})
+					},
+					notifySuccess(msg) {
+						Notiflix.Notify.Success(msg, {
+							cssAnimationStyle: 'zoom',
+							cssAnimationDuration: 500,
+						})
 					}
 				},
 			})
@@ -839,9 +890,9 @@ $varsesion = null;
 
 
 		<script type="text/javascript">
-			var ano = (new Date).getFullYear();
+			var anio = (new Date).getFullYear();
 			$(document).ready(function() {
-				$("#fecha").text(ano);
+				$("#fecha").text(anio);
 			});
 		</script>
 		<!--JavaScript Fecha automatica-->
