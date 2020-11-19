@@ -8,6 +8,15 @@ $varsesion = null;
 	<meta name="google-site-verification" content="chjjmMO5P0fEo63SPIxtxmFJdzI3wq-7zEWF4oGcM80" />
 	<title>Yohan Roldan</title>
 
+	<!-- Vuesax -->
+	<link href="https://cdn.jsdelivr.net/npm/vuesax/dist/vuesax.css" rel="stylesheet">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- Boxicons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+	<!-- or -->
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
 	<!-- For-Mobile-Apps -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -759,6 +768,49 @@ $varsesion = null;
 
 			</div>
 		</div>
+
+
+		<div id="app">
+			<vs-button dark shadow :active="isActive" @click="activated">
+				Dark
+			</vs-button>
+
+			<vs-button @click="openNotification">
+				Open Notification
+			</vs-button>
+		</div>
+
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/vuesax"></script>
+		<script>
+			new Vue({
+				el: '#app',
+				data() {
+					return {
+						nombre: '',
+						correo: '',
+						telefono: '',
+						mensaje: '',
+						isActive: false
+					}
+				},
+				methods: {
+					activated() {
+						this.isActive = !this.isActive;
+					},
+					openNotification() {
+						this.$vs.notification({
+							title: 'Documentation Vuesax 4.0+',
+							text: `These documents refer to the latest version of vuesax (4.0+),
+            to see the documents of the previous versions you can do it here 👉 Vuesax3.x`
+						})
+					}
+				},
+			})
+		</script>
+		<style scoped lang="stylus">
+			.vs-button margin 10px i margin 2px font-size 1.2rem transform-origin center &.b-r transform rotate(90deg) &.t-r transform rotate(0deg) &.t-l transform rotate(-90deg) &.b-l transform rotate(-180deg)
+		</style>
 		<!-- //Footer -->
 
 		<!-- Custom-JavaScript-File-Links -->
