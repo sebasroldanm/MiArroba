@@ -6,7 +6,9 @@ $varsesion = null;
 
 <head>
 	<meta name="google-site-verification" content="chjjmMO5P0fEo63SPIxtxmFJdzI3wq-7zEWF4oGcM80" />
-	<link href="https://cdn.jsdelivr.net/npm/vuesax/dist/vuesax.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
 	<title>Yohan Roldan</title>
 
 	<!-- For-Mobile-Apps -->
@@ -34,10 +36,10 @@ $varsesion = null;
 	<!-- Swipe-Box-CSS -->
 	<link rel="stylesheet" href="css/swipebox.css">
 	<!-- Animate-CSS -->
-	<link href="css/animate.min.css" rel="stylesheet">
+	<!-- <link href="css/animate.min.css" rel="stylesheet"> -->
 	<!-- //Custom-Theme-Files -->
 
-	<script>
+	<!-- <script>
 		$(function() {
 			$(".meter > span").each(function() {
 				$(this)
@@ -48,7 +50,7 @@ $varsesion = null;
 					}, 1200);
 			});
 		});
-	</script>
+	</script> -->
 
 	<!-- Web-Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
@@ -689,18 +691,33 @@ $varsesion = null;
 
 					<div class="message">
 						<div class="col-md-6 col-sm-6 grid_6 c1">
-							<input type="text" name="t_nombre" class="text" value="Nombre" placeholder="Nombre" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nombre';}">
-							<input type="text" name="t_correo" class="text" value="Correo" placeholder="Correo" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Correo';}">
-							<input type="text" name="t_telefono" class="text" value="Telefono" placeholder="Teléfono" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Teléfono';}">
+							<!-- <input type="text" name="t_nombre" v-model="nombre" class="text" value="Nombre" placeholder="Nombre" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nombre';}">
+							<input type="text" name="t_correo" v-model="correo" class="text" value="Correo" placeholder="Correo" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Correo';}">
+							<input type="text" name="t_telefono" v-model="telefono" class="text" value="Telefono" placeholder="Teléfono" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Teléfono';}"> -->
+							<el-input placeholder="Nombre" v-model="nombre" clearable>
+							</el-input>
+							<el-input placeholder="Correo" v-model="correo" clearable>
+							</el-input>
+							<el-input placeholder="Teléfono" v-model="telefono" clearable>
+							</el-input>
 						</div>
 
 						<div class="col-md-6 col-sm-6 grid_6 c1">
-							<textarea placeholder="Mensaje" name="t_mensaje" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mensaje';}">Mensaje</textarea>
+							<!-- <textarea placeholder="Mensaje" name="t_mensaje" v-model="mensaje" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mensaje';}">Mensaje</textarea> -->
+							<el-input type="textarea" :autosize="{ minRows: 7, maxRows: 7}" placeholder="Mensaje" v-model="mensaje">
+							</el-input>
 						</div>
 						<div class="clearfix"></div>
 					</div>
-					<p><input type="checkbox" required onClick="document.form.boton.disabled=false">Acepto las <a href="#">Condiciones del Servicio</a> y la <a href="#">Política de privacidad</a></p><br><br>
-					<input type="submit" name="boton" class="more_btn" disable="true" value="Enviar Mensaje">
+					<!-- <input type="checkbox" required onClick="document.form.boton.disabled=false">Acepto las <a href="#">Condiciones del Servicio</a> y la <a href="#">Política de privacidad</a></p><br><br> -->
+					<div>
+						<el-checkbox v-model="checked">Acepto las <a href="#">Condiciones del Servicio</a> y la <a href="#">Política de privacidad</el-checkbox>
+					</div>
+					<!-- <div><input type="submit" name="boton" class="more_btn" disable="true" value="Enviar Mensaje"></div> -->
+					<el-button class="more_btn" @click="mostrar">Enviar Mensaje</el-button>
+					<el-dialog :visible.sync="visible" title="Aviso">
+						<p>{{msg}}</p>
+					</el-dialog>
 				</form>
 
 			</div>
@@ -771,6 +788,56 @@ $varsesion = null;
 		<!-- Slideanim-JavaScript -->
 
 		<!--JavaScript Fecha automatica-->
+		<!-- import Vue before Element -->
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<!-- import JavaScript -->
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+		<script>
+			new Vue({
+				el: '#contacto',
+				data() {
+					return {
+						nombre: '',
+						correo: '',
+						telefono: '',
+						mensaje: '',
+						checked: false,
+						visible: false,
+						msg: ''
+					}
+				},
+				methods: {
+					mostrar() {
+						if (this.nombre === '') {
+							this.visible = !this.visible;
+							this.msg = 'El campo nombre es requerido';
+						}
+						else if (this.correo === '') {
+							this.visible = !this.visible;
+							this.msg = 'El campo correo es requerido';
+						}
+						else if (this.telefono === '') {
+							this.visible = !this.visible;
+							this.msg = 'El campo teléfono es requerido';
+						}
+						else if (this.mensaje === '') {
+							this.visible = !this.visible;
+							this.msg = 'El campo mensaje es requerido';
+						}
+						else if (this.mensaje === '') {
+							this.visible = !this.visible;
+							this.msg = 'El campo mensaje es requerido';
+						}
+						else {
+							this.visible = !this.visible;
+							this.msg = 'Mensaje enviado';
+						}
+					}
+				},
+			})
+		</script>
+
+
 		<script type="text/javascript">
 			var ano = (new Date).getFullYear();
 			$(document).ready(function() {
