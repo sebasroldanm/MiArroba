@@ -25,6 +25,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- <script src="../dist/index.js"></script> -->
 	<script src="../dist/notiflix-aio-2.6.0.min.js"></script>
 
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 
 
 	<!-- Default-JavaScript-File -->
@@ -709,7 +711,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="col-md-5 col-sm-5 contact-right agileits-w3layouts">
 						<textarea name="Message" placeholder="Mensaje" required="" v-model="mensaje"></textarea>
-						<input type="submit" value="Enviar" @click="submit">
+						<input type="button" value="Enviar" @click="submit" style="outline: none;
+						color: #fff;
+						padding: .5em 2em;
+						margin-top: 12px;
+						font-size: 1em;
+						background: #01bcfa;
+						border: 1px solid #01bcfa;
+						transition: 0.5s all;
+						float: right;
+						letter-spacing: 1px;">
 					</div>
 					<div class="clearfix"> </div>
 				</form>
@@ -731,11 +742,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					visible: false,
 					msg: '',
 					url: '',
+					hostPage: '',
 				}
 			},
 			created() {
-				this.url = `${window.location.origin}/#contact`
+				// this.url = `${window.location.origin}/#contact`
+				this.hostPage = window.location.origin;
 				console.log(window.location.origin);
+
+
+
+				axios.get(`${this.hostPage}/ajax.php`, {
+						}).then(function (res) {
+							if (res.status == 200) {
+								console.log("Datos desde Ajax");
+								console.log(res.data)
+							}
+						}).catch(function (err) {
+							console.log(err)
+						}).then(function () {
+							console.log('Completado')
+						})
 			},
 			methods: {
 				submit() {
@@ -756,17 +783,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						let msg = 'El campo mensaje es requerido';
 						this.notifyError(msg);
 					}
-					if (this.mensaje === '') {
-						let msg = 'El campo mensaje es requerido';
-						this.notifyError(msg);
-					}
 					// if (this.checked === false) {
 					// 	let msg = 'Debe aceptar los terminos y condiciones';
 					// 	this.notifyWarning(msg);
 					// }
-					if (this.nombre !== '' && this.correo !== '' && this.telefono !== '' && this.mensaje !== '' && this.mensaje !== '') {
-						let msg = 'Mensaje Enviado';
-						this.notifySuccess(msg);
+					if (this.nombre !== '' && this.correo !== '' && this.telefono !== '' && this.mensaje !== '') {
+						let status;
+						var data = {
+							nombre: this.nombre,
+							correo: this.correo,
+							telefono: this.telefono,
+							mensaje: this.mensaje
+						};
+
+						console.log(data);
+
+						axios.post(`${this.hostPage}/ajax.php`, data)
+						.catch(function (err) {
+							console.log(err);
+						})
+						.then(res => {
+							status = res.data;
+							console.log(status);
+							this.notifySuccess(res.data);
+							this.clearForm()
+						})
+						.then(function () {
+							// console.log('Buenaaaa');
+							// this.clearForm()
+						});
+						
 					}
 				},
 
@@ -787,6 +833,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						cssAnimationStyle: 'zoom',
 						cssAnimationDuration: 500,
 					})
+				},
+				clearForm() {
+					this.nombre = ''
+					this.correo = ''
+					this.telefono  = ''
+					this.mensaje = ''
 				}
 			},
 		})
